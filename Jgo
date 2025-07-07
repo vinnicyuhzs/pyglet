@@ -1,0 +1,18 @@
+import pyglet
+
+# Criar uma janela
+janela = pyglet.window.Window(800, 600)
+
+# Definir uma função para desenhar na janela
+@janela.event
+def on_draw():
+    janela.clear()
+    label = pyglet.text.Label('Olá, mundo!',
+                              font_name='Times New Roman',
+                              font_size=36,
+                              x=janela.width//2, y=janela.height//2,
+                              anchor_x='center', anchor_y='center')
+    label.draw()
+
+# Executar o loop principal
+pyglet.app.run()
